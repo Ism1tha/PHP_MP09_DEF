@@ -14,27 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $task1 = new stdClass();
-    $task1->id = 1;
-    $task1->title = 'Task 1';
-    $task1->description = 'Description 1';
-    $task1->completed = false;
-    $task2 = new stdClass();
-    $task2->id = 2;
-    $task2->title = 'Task 2';
-    $task2->description = 'Description 2';
-    $task2->completed = true;
-    $tasks = [
-        $task1,
-        $task2
-    ];
+    $tasks = DB::table('tasks')->get();
     return view('index', [
         'tasks' => $tasks
     ]);
 });
 
 Route::get('/users', function () {
-    return view('users');
+    $users = DB::table('users')->get();
+    return view('users', [
+        'users' => $users
+    ]);
 });
 
 Route::get('/contact', function () {
