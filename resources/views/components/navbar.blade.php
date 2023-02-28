@@ -8,10 +8,10 @@
             </div>
             <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                 <!-- Current: "border-blue-500 text-gray-900", Default: "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300" -->
-                <a href="/" class="hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tasques</a>
-                <a href="/users" class="hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Usuaris</a>
-                <a href="/contact" class="hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contacte</a>
-                <a href="/about" class="hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Sobre nossaltres</a>
+                <a href="/" class="@if(Route::currentRouteName() == 'tasks') border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Tasques</a>
+                <a href="/users" class="@if(Route::currentRouteName() == 'users') border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Usuaris</a>
+                <a href="/contact" class="@if(Route::currentRouteName() == 'contact') border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Contacte</a>
+                <a href="/about" class="@if(Route::currentRouteName() == 'about') border-blue-500 text-gray-900 @else border-transparent text-gray-500 @endif hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Sobre nossaltres</a>
             </div>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:items-center">
