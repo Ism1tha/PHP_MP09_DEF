@@ -20,10 +20,12 @@ Route::get('/', [TaskController::class, 'index'])->name('tasks');
 Route::get('/users', [UserController::class, 'index'])->name('users');
 
 Route::get('/contact', function () {
-    return view('contact');
+    $title = 'Contacte';
+    return view('contact', compact('title'));
 })->name('contact');
 
 Route::get('/about', function () {
-    return view('about');
+    $title = 'Sobre nossaltres';
+    return view('about', compact('title'));
 })->name('about');
 

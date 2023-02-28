@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title=$title>
     <p class="mt-6 text-lg leading-8 text-gray-600">Soc un alumne de l'INS EBRE que està realitzant el curs de Laravel de Acacha.</p>
     <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <li>
