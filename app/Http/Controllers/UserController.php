@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
-        $title = 'Users';
+        $title = 'Usuaris';
         return view('users', compact('users', 'title'));
     }
 }
